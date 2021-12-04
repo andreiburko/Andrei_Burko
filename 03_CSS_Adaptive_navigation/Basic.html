@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        body {
+            height: 10000px;
+            text-align: center
+        }
+        div.day > div {
+            display: inline-block;
+            border-style: double;
+            border-width: 5px;
+            border-color: cadetblue;
+            background-color: darkseagreen;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 5px;
+            width: 220px;
+            position: relative;
+            cursor: pointer
+        }
+        div.timetable {
+            display: none;
+            cursor: pointer
+        }
+        .timetable1 {
+            display: block;
+            border-style: double;
+            border-width: 5px;
+            border-color: orangered;
+            background-color: orange;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 5px;
+            width: 220px
+        }
+        div.day > div:hover div.timetable {
+            display: block;
+            position: absolute;
+            top: 110%;
+            left: -2%;
+            z-index: 1
+        }
+        @media all and (max-width: 1360px) {
+            body {
+                text-align: left
+            }
+            div.day > div {
+                display: block
+            }
+            div.timetable {
+                margin-left: 219px
+            }
+            div.day > div:hover div.timetable {
+                top: -15%
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="day">
+        <div>Понедельник</div>
+        <div>Вторник</div>
+        <div>Среда
+            <div class="timetable">
+                <div class="timetable1">Завтрак</div>
+                <div class="timetable1">Обед</div>
+                <div class="timetable1">Ужин</div>
+            </div>
+        </div>
+        <div>Четверг</div>
+        <div>Пятница</div>
+        <div>Суббота</div>
+    </div>
+</body>
+</html>

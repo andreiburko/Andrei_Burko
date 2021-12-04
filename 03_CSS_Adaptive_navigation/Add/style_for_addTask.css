@@ -1,0 +1,63 @@
+#days > ul {
+    height: 10000px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px
+}
+#days > ul > li {
+    list-style: none;
+    display: inline-block;
+    border-style: double;
+    border-width: 5px;
+    border-color:rgb(103, 138, 34);
+    background-color: yellowgreen;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px;
+    width: 200px;
+    position: relative;
+    cursor: pointer
+}
+#days li ul {
+    position: absolute;
+    top: 37px;
+    left: -5px;            
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.7s linear
+}
+#days li:hover ul {
+    max-height:300px
+}
+#days li ul li {
+    border-style: double;
+    border-width: 5px;
+    border-color: rgb(212, 212, 55);
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    width: 200px;
+    cursor: pointer
+}
+#days li ul li:hover {
+    background-color: wheat
+}
+@media all and (max-width: 1380px) {
+    #days > ul {
+        text-align: left
+    }
+    #days > ul > li {
+        display: block
+    }
+    #days li ul {
+        top: -4px;
+        left: 215px;
+        max-width: 0px;
+        transition: max-width 0.7s linear
+    }
+    #days li:hover ul {
+        max-width: 300px
+    }
+}
