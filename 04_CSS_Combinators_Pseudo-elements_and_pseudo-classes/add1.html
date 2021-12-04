@@ -18,37 +18,31 @@
         p {
             margin: 5px
         }
-        li:first-child:hover {
-            background-image: url('img/logo-doc.jpg');
-            background-repeat: no-repeat;
-            background-position: 140px 1px
+        div a:first-child:before {
+            content: url('img/extref.png')
         }
-        li:nth-child(2):hover {
-            background-image: url('img/logo-pdf.png');
-            background-repeat: no-repeat;
-            background-position: 105px 1px
+        div a[href$='_Word']:after {
+            content: url('img/logo-doc.jpg')
         }
-        li:last-child:hover::after {
-            background-image: url('img/logo-zip.gif');
-            background-repeat: no-repeat;
-            background-position: 49px 1px
+        div a[href$='_Format']:last-child:after {
+            content: url('img/logo-pdf.png')
+        }
+        div a[href$='ZIP']:last-child:after {
+            content: url('img/logo-zip.gif')
         }
         ul {
             list-style-image: url('img/logo-list.jpg')
         }
-        p a:first-child::before {
-            content: url(img/extref.png)
+        li:first-child:hover:after {
+            content: url('img/logo-doc.jpg')
         }
-        p a[href$='_Word']::after {
-            content: url(img/logo-doc.jpg)
+        li:nth-child(2):hover:after {
+            content: url('img/logo-pdf.png')
         }
-        p a[href$='_Format']:last-child:after {
-            content: url(img/logo-pdf.png)
+        li:last-child:hover:after {
+            content: url('img/logo-zip.gif')
         }
-        p a[href$='ZIP']:last-child:after {
-            content: url(img/logo-zip.gif)
-        }
-    </style>
+        </style>
 </head>
 <body>
     <h1>Форматы файлов.</h1>
