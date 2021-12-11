@@ -8,7 +8,6 @@
     <style>
         table {
             width: 700px;
-            height: 160px;
             border-collapse: collapse
         }
         td {
@@ -30,7 +29,18 @@
             font-weight: normal
         }
         .data:hover {
-            background-color:rgba(135, 206, 250, 0.418)
+            background-color:rgba(135, 206, 250, 0.418);
+            cursor: pointer
+        }
+        button {
+            margin: 10px;
+            background-color: rgb(74, 74, 250);
+            color: white;
+            height: 30px;
+            cursor: pointer
+        }
+        button:hover {
+            background-color: rgb(0, 0, 226)
         }
     </style>
 </head>
@@ -94,5 +104,25 @@
             </tr>
         </tfoot>
     </table>
+    <button><span>Нет скрытых строк</span></button>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".data").click(function () {
+                $(this).toggle(100, function () {
+                    $("span").html("Показать все строки")
+                })
+                $("button").click(function () {
+                    $(".data").show(100, function () {
+                        $("span").html("Нет скрытых строк")
+                    })
+                })
+            })
+        })
+    </script>
 </body>
 </html>
